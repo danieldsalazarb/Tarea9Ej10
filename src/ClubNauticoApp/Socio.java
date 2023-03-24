@@ -1,12 +1,12 @@
 package ClubNauticoApp;
 
-import java.util.*;
 
+import java.util.ArrayList;
 
 /**
  * Class Socios
  */
-public class Socios {
+public class Socio {
 
   //
   // Fields
@@ -17,13 +17,25 @@ public class Socios {
   public String dni;
   public int telefono;
   public String fechaIngresoClub;
-  public String fechaCompraAmarre;
-  // Relacion entre Socio y Embarcación
-  
+
+  public ArrayList<Amarre> amarres = new ArrayList<Amarre>();
+
+  public ArrayList<SocioCompraAmarre> socioCompraAmarres = new ArrayList<SocioCompraAmarre>();
+
+
   //
   // Constructors
   //
-  public Socios () { };
+
+
+  public Socio(String nombre, String direccion, String dni, int telefono, String fechaIngresoClub) {
+    this.nombre = nombre;
+    this.direccion = direccion;
+    this.dni = dni;
+    this.telefono = telefono;
+    this.fechaIngresoClub = fechaIngresoClub;
+  }
+
   
   //
   // Methods
@@ -114,24 +126,26 @@ public class Socios {
     return fechaIngresoClub;
   }
 
-  /**
-   * Set the value of fechaCompraAmarre
-   * @param newVar the new value of fechaCompraAmarre
-   */
-  public void setFechaCompraAmarre (String newVar) {
-    fechaCompraAmarre = newVar;
-  }
-
-  /**
-   * Get the value of fechaCompraAmarre
-   * @return the value of fechaCompraAmarre
-   */
-  public String getFechaCompraAmarre () {
-    return fechaCompraAmarre;
-  }
-
   //
   // Other methods
   //
+
+  /**
+   */
+  public void mostrar()
+  {
+  }
+
+
+  /**
+   * @return       SocioCompraAmarre
+   */
+  public SocioCompraAmarre comprarAmarre (String fecha, Amarre amarre) {
+
+    this.amarres.add(amarre);
+
+    return  new SocioCompraAmarre (fecha, this, amarre);
+  }
+
 
 }

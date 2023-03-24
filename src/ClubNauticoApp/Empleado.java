@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Class Empleados
  */
-public class Empleados {
+public class Empleado {
 
   //
   // Fields
@@ -17,14 +17,24 @@ public class Empleados {
   public String direccion;
   public int telefono;
   public String especialidad;
-  // Relación entre Empleados y ZonasClubNautico
-  // Relación entre Empleados y Embarcaciones
-  
+
+  public ArrayList <Embarcacion> embarcaciones = new ArrayList<Embarcacion>();
+
+  public ArrayList <ZonaClubNautico> zonasClubNautico = new ArrayList<ZonaClubNautico>();
+
   //
   // Constructors
   //
-  public Empleados () { };
-  
+
+  public Empleado(int codigoEmpleado, String nombre, String direccion, int telefono, String especialidad) {
+    this.codigoEmpleado = codigoEmpleado;
+    this.nombre = nombre;
+    this.direccion = direccion;
+    this.telefono = telefono;
+    this.especialidad = especialidad;
+  }
+
+
   //
   // Methods
   //
@@ -117,5 +127,13 @@ public class Empleados {
   //
   // Other methods
   //
+
+  /**
+   * Muestra el Empleado con System.out.println
+   */
+  public void mostrar()
+  {
+  }
+
 
 }

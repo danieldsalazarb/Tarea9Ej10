@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Class Amarre
  */
-public class Amarre extends Socios {
+public class Amarre {
 
   //
   // Fields
@@ -16,14 +16,23 @@ public class Amarre extends Socios {
   public float lecturaContadorAgua;
   public float lecturaContadorLuz;
   public boolean serviciosContratados;
-  // Relacion entre Embarcacion y Amarre
-  // Relacion entre zonasClubNautico y Amarres
+
+  public ArrayList<EmbarcacionOcupaAmarre> embarcacionOcupaAmarres = new ArrayList<EmbarcacionOcupaAmarre>();
+
+  public ArrayList<SocioCompraAmarre> socioCompraAmarres = new ArrayList<SocioCompraAmarre>();
   
   //
   // Constructors
   //
-  public Amarre () { };
-  
+
+  public Amarre(int numeroAmarre, float lecturaContadorAgua, float lecturaContadorLuz, boolean serviciosContratados) {
+    this.numeroAmarre = numeroAmarre;
+    this.lecturaContadorAgua = lecturaContadorAgua;
+    this.lecturaContadorLuz = lecturaContadorLuz;
+    this.serviciosContratados = serviciosContratados;
+  }
+
+
   //
   // Methods
   //
@@ -100,5 +109,14 @@ public class Amarre extends Socios {
   //
   // Other methods
   //
+
+  /**
+   * @return       EmbarcacionOcupaAmarre
+   */
+  public EmbarcacionOcupaAmarre amarrar (String fecha, Embarcacion embarcacion) {
+
+    return new EmbarcacionOcupaAmarre (fecha, embarcacion, this);
+  }
+
 
 }

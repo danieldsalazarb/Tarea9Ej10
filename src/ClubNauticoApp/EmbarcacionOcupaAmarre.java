@@ -1,21 +1,32 @@
 package ClubNauticoApp;
 
+
 /**
  * Class EmbarcacionOcupaAmarre
  */
-public class EmbarcacionOcupaAmarre extends Embarcaciones, Amarre {
+public class EmbarcacionOcupaAmarre {
+
 
   //
   // Fields
   //
 
   public String fechaAmarre;
-  
+
+  public Embarcacion embarcacion;
+
+  public Amarre amarre;
   //
   // Constructors
   //
-  public EmbarcacionOcupaAmarre () { };
-  
+
+  public EmbarcacionOcupaAmarre(String fechaAmarre, Embarcacion embarcacion, Amarre amarre) {
+    this.fechaAmarre = fechaAmarre;
+    this.embarcacion = embarcacion;
+    this.amarre = amarre;
+  }
+
+
   //
   // Methods
   //

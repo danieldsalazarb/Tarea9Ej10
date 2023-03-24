@@ -1,12 +1,12 @@
 package ClubNauticoApp;
 
-import java.util.*;
 
+import java.util.ArrayList;
 
 /**
  * Class Embarcaciones
  */
-public class Embarcaciones {
+public class Embarcacion {
 
   //
   // Fields
@@ -15,18 +15,22 @@ public class Embarcaciones {
   public String matricula;
   public String nombre;
   public String tipo;
-  public Float dimensiones;
+  public float dimensiones;
   public int codigoEmpleadoEncargado;
-  // Relacion entre Socio y Embarcación
-  // Relacion entre Embarcacion y Amarre
-  // Relación entre Empleados y Embarcaciones
+
+  public ArrayList<EmbarcacionOcupaAmarre> embarcacionOcupaAmarres = new ArrayList<EmbarcacionOcupaAmarre>();
   
   //
   // Constructors
   //
-  public Embarcaciones () { };
-  
-  //
+  public Embarcacion(String matricula, String nombre, String tipo, float dimensiones, int codigoEmpleadoEncargado) {
+    this.matricula = matricula;
+    this.nombre = nombre;
+    this.tipo = tipo;
+    this.dimensiones = dimensiones;
+    this.codigoEmpleadoEncargado = codigoEmpleadoEncargado;
+  }
+//
   // Methods
   //
 
@@ -87,7 +91,7 @@ public class Embarcaciones {
    * Set the value of dimensiones
    * @param newVar the new value of dimensiones
    */
-  public void setDimensiones (Float newVar) {
+  public void setDimensiones (float newVar) {
     dimensiones = newVar;
   }
 
@@ -95,7 +99,7 @@ public class Embarcaciones {
    * Get the value of dimensiones
    * @return the value of dimensiones
    */
-  public Float getDimensiones () {
+  public float getDimensiones () {
     return dimensiones;
   }
 
