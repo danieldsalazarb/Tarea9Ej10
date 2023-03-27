@@ -13,7 +13,10 @@ public class ZonaClubNautico {
   //
 
   public String letra;
-  public String tipoEmbarcacionesAsignadas;
+
+  public String tipoEmbarcacionAsignada;
+
+  public int cantidadEmbarcacionContenida;
   public float profundidad;
   public float anchoAmarre;
 
@@ -25,14 +28,14 @@ public class ZonaClubNautico {
   // Constructors
   //
 
-  public ZonaClubNautico(String letra, String tipoEmbarcacionesAsignadas, float profundidad, float anchoAmarre) {
+
+  public ZonaClubNautico(String letra, String tipoEmbarcacionAsignada, int cantidadEmbarcacionContenida, float profundidad, float anchoAmarre) {
     this.letra = letra;
-    this.tipoEmbarcacionesAsignadas = tipoEmbarcacionesAsignadas;
+    this.tipoEmbarcacionAsignada = tipoEmbarcacionAsignada;
+    this.cantidadEmbarcacionContenida = cantidadEmbarcacionContenida;
     this.profundidad = profundidad;
     this.anchoAmarre = anchoAmarre;
   }
-
-  ;
   
   //
   // Methods
@@ -64,7 +67,7 @@ public class ZonaClubNautico {
    * @param newVar the new value of tipoEmbarcacionesAsignadas
    */
   public void setTipoEmbarcacionesAsignadas (String newVar) {
-    tipoEmbarcacionesAsignadas = newVar;
+    tipoEmbarcacionAsignada = newVar;
   }
 
   /**
@@ -72,7 +75,7 @@ public class ZonaClubNautico {
    * @return the value of tipoEmbarcacionesAsignadas
    */
   public String getTipoEmbarcacionesAsignadas () {
-    return tipoEmbarcacionesAsignadas;
+    return tipoEmbarcacionAsignada;
   }
 
   /**
@@ -80,7 +83,7 @@ public class ZonaClubNautico {
    * @param newVar the new value of cantidadEmbarcacionesContenidas
    */
   public void setCantidadEmbarcacionesContenidas (int newVar) {
-    cantidadEmbarcacionesContenidas = newVar;
+    cantidadEmbarcacionContenida = newVar;
   }
 
   /**
@@ -88,7 +91,7 @@ public class ZonaClubNautico {
    * @return the value of cantidadEmbarcacionesContenidas
    */
   public int getCantidadEmbarcacionesContenidas () {
-    return cantidadEmbarcacionesContenidas;
+    return cantidadEmbarcacionContenida;
   }
 
   /**

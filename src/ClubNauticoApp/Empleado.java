@@ -128,12 +128,4 @@ public class Empleado {
   // Other methods
   //
 
-  /**
-   * Muestra el Empleado con System.out.println
-   */
-  public void mostrar()
-  {
-  }
-
-
 }

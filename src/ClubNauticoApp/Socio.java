@@ -131,13 +131,6 @@ public class Socio {
   //
 
   /**
-   */
-  public void mostrar()
-  {
-  }
-
-
-  /**
    * @return       SocioCompraAmarre
    */
   public SocioCompraAmarre comprarAmarre (String fecha, Amarre amarre) {
